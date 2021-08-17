@@ -1,0 +1,64 @@
+@import url('https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@500&family=Noto+Serif+JP:wght@300&family=Oswald&display=swap');
+
+:root{
+  --fullvh: 1vh;
+  --fullvw: 1vw;
+}
+
+html{
+  background-color: black;
+  overflow: hidden;
+  touch-action: pan-x pan-y;
+  overscroll-behavior-x: none;
+}
+
+.sourceFont{
+  font-family: 'Crimson Pro', serif;
+}
+
+.oswald{
+  font-family: 'Oswald', sans-serif;
+}
+
+.noto{
+  font-family: 'Noto Serif JP', serif;
+}
+
+html, body{
+  position: fixed; 
+
+  min-height: -webkit-fill-available;
+}
+#main{
+  transition: all 2s ease-in-out;
+}
+
+.image{
+  position: relative;
+  width: 100%;
+  height: clamp(4rem, 13.5vh, 6rem);
+}
+.txt{
+  font-size: clamp(.5rem , 2.5vw, 3rem);
+}
+.image img{
+  transition: all 1s ease-in-out;
+  object-fit: cover;
+  object-position: top left;
+  height: 100%;
+  width: 100%;
+  box-shadow: -9px 11px 20px 5px #000000;
+}
+
+.image:not(:first-child) img{
+  position: absolute;
+}
+
+.image img:hover{
+  transform: translateY(-20px);
+}
+
+.social{
+  width: clamp(3rem, 15vw, 8rem) !important;
+  height: clamp(3rem, 15vw, 8rem) !important;
+}
